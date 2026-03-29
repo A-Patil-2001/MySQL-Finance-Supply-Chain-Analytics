@@ -129,7 +129,7 @@ BEGIN
 END
 ```
 
-### 6) Create a store Procedure for top n devision by Sold Quantity
+### 7) Create a store Procedure for top n devision by Sold Quantity
 - Input
   - Fiscal Year
   - Top N
