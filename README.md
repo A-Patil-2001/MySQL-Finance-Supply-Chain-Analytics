@@ -11,9 +11,9 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 ## Tools & Technologies
 - SQL (MySQL)
 - Advanced SQL Concepts:
-CTEs
-Views
-Stored Procedures
-User Defined Functions (UDFs)
-Joins & Window Functions
-Subqueries & Temporary Tables
+-- CTEs
+-- Views
+-- Stored Procedures
+-- User Defined Functions (UDFs)
+-- Joins & Window Functions
+-- Subqueries & Temporary Tables
