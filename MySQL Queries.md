@@ -45,3 +45,22 @@ ON
 WHERE customer_code = 90002002
 GROUP BY s.date
 ``` 
+
+3) Generate a yearly report for "Croma" India where there are two columns
+   - Fiscal year
+   - Total Gross Sales amount in the year from "Croma"
+``` sql
+SELECT 
+    get_fiscal_year(date) as fiscal_year,
+    ROUND(SUM(g.gross_price * s.sold_quantity),2) as gross_price_total
+FROM fact_sales_monthly s
+JOIN fact_gross_price g
+ON
+	s.product_code = g.product_code AND
+    g.fiscal_year = get_fiscal_year(s.date)
+WHERE 
+	customer_code = 90002002
+GROUP BY get_fiscal_year(date)
+ORDER BY fiscal_year ASC;
+```
+   
