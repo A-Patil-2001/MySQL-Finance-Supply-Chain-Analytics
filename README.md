@@ -47,3 +47,9 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 > - Top Customers by Net Sales
 > - Top Divisions by Sold Quantity
 > - Top Products by Net Sales
+
+### Views Created
+> - Gross Sales
+> - Net Sales
+> - Pre-Invoice Discount Sales
+> - Post-Invoice Discount Sales
