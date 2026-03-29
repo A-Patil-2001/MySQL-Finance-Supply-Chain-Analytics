@@ -20,11 +20,11 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 
 ## Key Features & Work Done
 ### Financial Analysis
-- [x] User Defined Functions (UDFs)
+- [x] **User Defined Functions (UDFs)**
 - Fiscal Year Calculation
 - Fiscal Quarter Calculation
 
-- [x] Reports Created
+- [x] **Reports Created**
 - Monthly Gross Sales (Product Transactions)
 - Customer-wise Monthly Gross Sales (Country-specific)
 - Yearly Gross Sales Report (Customer-wise)
@@ -34,7 +34,7 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 - Pre-Invoice Discount Analysis (Top markets, Top products, Top customers)
 
 ### Supply Chain Analysis
-- Forecast Accuracy Report using:
+- **Forecast Accuracy Report using:**
   - Net Error
   - Absolute Error
   - Forecast Accuracy (%)
