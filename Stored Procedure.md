@@ -129,7 +129,7 @@ BEGIN
 END
 ```
 
-### 7) Create a store Procedure for top n devision by Sold Quantity
+### 6) Create a store Procedure for top n devision by Sold Quantity
 - Input
   - Fiscal Year
   - Top N
@@ -157,7 +157,7 @@ BEGIN
 END
 ```
 
-### 6) Create a store Procedure to calculate forecast accuracy 
+### 7) Create a store Procedure to calculate forecast accuracy 
 - Input
   - Fiscal Year
 ``` sql
