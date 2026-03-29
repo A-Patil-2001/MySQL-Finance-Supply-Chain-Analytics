@@ -1,6 +1,6 @@
 # Finance Analysis
 
-1) Gross Sales report:
+### 1) Gross Sales report:
 - Monthly Product transaction
      - column required
        - Month
@@ -29,7 +29,7 @@ ORDER BY date ASC
 LIMIT 10000;
 ```
 
-2) As a product owner, I need aggregate monthly gross sales report for "Croma" India customer
+### 2) As a product owner, I need aggregate monthly gross sales report for "Croma" India customer
    - Report should have the following fields
      - Month
      - Total Gross Sales amount for "Croma" India
@@ -46,7 +46,7 @@ WHERE customer_code = 90002002
 GROUP BY s.date
 ``` 
 
-3) Generate a yearly report for "Croma" India where there are two columns
+### 3) Generate a yearly report for "Croma" India where there are two columns
    - Fiscal year
    - Total Gross Sales amount in the year from "Croma"
 ``` sql
@@ -64,7 +64,7 @@ GROUP BY get_fiscal_year(date)
 ORDER BY fiscal_year ASC;
 ```
    
-4) Monthly Gross Sales Report for customer "Croma" and Market "India":
+### 4) Monthly Gross Sales Report for customer "Croma" and Market "India":
    - Cloumn Required
      - Date
      - Monthly Sales
