@@ -13,7 +13,7 @@ BEGIN
 END
 ```
 
-2) Created User difine function for fiscial quarter
+### 2) Created User difine function for fiscial quarter
 ``` sql
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_fiscal_quarter`(
 		calander_date DATE
