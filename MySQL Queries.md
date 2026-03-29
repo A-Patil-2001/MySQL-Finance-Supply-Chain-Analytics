@@ -46,7 +46,7 @@ WHERE customer_code = 90002002
 GROUP BY s.date
 ``` 
 
-### 3) Generate a yearly report for "Croma" India where there are two columns
+### 3) Generate a yearly report for "Croma" India where there are two columns:
    - Fiscal year
    - Total Gross Sales amount in the year from "Croma"
 ``` sql
