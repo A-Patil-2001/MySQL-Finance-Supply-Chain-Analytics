@@ -29,7 +29,7 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 > - Customer-wise Monthly Gross Sales (Country-specific)
 > - Yearly Gross Sales Report (Customer-wise)
 > - Market Badge Classification:
-> 1. Gold (> 5M sales)
+  > - Gold (> 5M sales)
 > 2. Silver / Bronze
 > - Pre-Invoice Discount Analysis (Top markets, Top products, Top customers)
 
