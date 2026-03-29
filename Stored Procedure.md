@@ -1,4 +1,9 @@
 ### 1) Create a store Procedure that can Determine the market badge based on the following logic, if total sold quantity > 5 million that market is considered as Goald else it is Silver.
+- Input
+  - market
+  - fiscal year
+ - Output
+   - market badge 
 ``` sql
 CREATE DEFINER=`root`@`localhost` PROCEDURE `get_market_badge`(
 		IN in_market VARCHAR(45),
