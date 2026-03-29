@@ -64,3 +64,25 @@ GROUP BY get_fiscal_year(date)
 ORDER BY fiscal_year ASC;
 ```
    
+4) Monthly Gross Sales Report for customer "Croma" and Market "India":
+   - Cloumn Required
+     - Date
+     - Monthly Sales
+``` sql
+SELECT 
+		s.date,
+		ROUND(SUM(g.gross_price * s.sold_quantity),2) as gross_price_total
+	FROM fact_sales_monthly s
+	JOIN fact_gross_price g
+	ON
+		s.product_code = g.product_code AND
+		g.fiscal_year = get_fiscal_year(s.date)
+	WHERE 
+		customer_code IN (90002016, 90002008)
+	GROUP BY s.date; 
+    
+    SELECT * FROM dim_customer
+    WHERE customer LIKE "%amazon%" AND market = "India";
+    
+    SELECT FIND_IN_SET(9000208, "90002016,90002008");
+```
