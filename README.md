@@ -35,6 +35,6 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 
 ### Supply Chain Analysis
 > - **Forecast Accuracy Report using:**
-  - Net Error
-  - Absolute Error
-  - Forecast Accuracy (%)
+>   - Net Error
+>   - Absolute Error
+>   - Forecast Accuracy (%)
