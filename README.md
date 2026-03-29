@@ -38,3 +38,12 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 >   - Net Error
 >   - Absolute Error
 >   - Forecast Accuracy (%)
+
+### Stored Procedures
+> - Monthly Gross Sales Report
+> - Market Badge Classification
+> - Customer-wise Sales Report
+> - Forecast Accuracy Calculation
+> - Top Customers by Net Sales
+> - Top Divisions by Sold Quantity
+> - Top Products by Net Sales
