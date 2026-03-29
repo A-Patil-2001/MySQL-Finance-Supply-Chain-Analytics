@@ -60,3 +60,14 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 - [x] Segmented markets based on performance (Gold/Silver/Bronze)
 - [x] Evaluated forecasting accuracy to improve demand planning
 - [x] Enabled better financial tracking and strategic decisions
+
+## Skills Demonstrated
+- [x] Advanced SQL Analytics
+- [x] Financial & Supply Chain Analysis
+- [x] Data Modeling & Query Optimization
+- [x] Business Problem Solving
+- [x] Data-Driven Decision Making
+
+ ## Conclusion
+
+This project demonstrates the ability to transform raw data into meaningful financial and operational insights using SQL. It showcases strong analytical thinking and practical implementation of business intelligence concepts in real-world scenarios.     
