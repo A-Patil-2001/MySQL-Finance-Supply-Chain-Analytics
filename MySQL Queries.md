@@ -2,13 +2,13 @@
 
 ### 1) Gross Sales report:
 - Monthly Product transaction
-     - column required
-       - Month
-       - Product Name
-       - Variant
-       - Sold Quantity
-       - Gross price per item
-       - Gross price total
+     - Column required
+       - month
+       - product Name
+       - variant
+       - sold Quantity
+       - gross price per item
+       - gross price total
 ``` sql
 SELECT 
 	s.date, s.product_code,
@@ -31,8 +31,8 @@ LIMIT 10000;
 
 ### 2) As a product owner, I need aggregate monthly gross sales report for "Croma" India customer
    - Report should have the following fields
-     - Month
-     - Total Gross Sales amount for "Croma" India
+     - month
+     - total Gross Sales amount for "Croma" India
 ``` sql
 SELECT 
     s.date AS month,
@@ -47,8 +47,8 @@ GROUP BY s.date
 ``` 
 
 ### 3) Generate a yearly report for "Croma" India where there are two columns:
-   - Fiscal year
-   - Total Gross Sales amount in the year from "Croma"
+   - fiscal year
+   - total Gross Sales amount in the year from "Croma"
 ``` sql
 SELECT 
     get_fiscal_year(date) as fiscal_year,
@@ -65,9 +65,9 @@ ORDER BY fiscal_year ASC;
 ```
    
 ### 4) Monthly Gross Sales Report for customer "Croma" and Market "India":
-   - Cloumn Required
-     - Date
-     - Monthly Sales
+   - Cloumn required
+     - date
+     - gross price total
 ``` sql
 SELECT 
 		s.date,
@@ -88,6 +88,15 @@ SELECT
 ```
 
 ### 5) Generate a report for Pre Invoice Discount %
+- Columns required
+  - date
+  - product code
+  - product
+  - variant
+  - sold quantity
+  - gross price per item
+  - gross price total
+  - pre invoice discount %
 ``` sql
 SELECT 
 	s.date, 
@@ -114,6 +123,16 @@ LIMIT 10000;
 ```
 
 ### 6)  Generate a report for Net Invoice Sales
+- Columns required
+  - date
+  - product code
+  - product
+  - variant
+  - sold quantity
+  - gross price per item
+  - gross price total
+  - pre invoice discount %
+  - net invoice sales
 ``` sql
 -- We have created a CTE (Common Table Expression), This is a tempervory table which is used only for the perticular query
  WITH cte1 AS (SELECT 
@@ -143,6 +162,17 @@ FROM cte1 ;
 ```
 
 ### 7) Generate a report for Post Invoice Decuction %
+- Columns required
+  - date
+  - product code
+  - product
+  - variant
+  - sold quantity
+  - gross price per item
+  - gross price total
+  - pre invoice discount %
+  - net invoice sales
+  - post invoice discount %
 ``` sql
 SELECT 
 	s.date, s.fiscal_year,
@@ -214,4 +244,43 @@ WHERE fiscal_year = 2021
 GROUP BY product
 ORDER BY net_sales_mln DESC
 LIMIT 5;
+```
+
+### 12) AS a product owner, I want to see the report for fiscal year 2021 for top 10 markets by % net sales
+``` sql
+WITH cte1 AS (SELECT 
+					c.customer,
+					ROUND(SUM(n.net_sales)/1000000,2) as net_sales_mln
+				FROM net_sales n
+				JOIN dim_customer c
+				ON n.customer_code = c.customer_code
+				WHERE 
+					n.fiscal_year = 2021 
+				GROUP BY c.customer)
+
+SELECT 
+	*,
+    ROUND(net_sales_mln*100/SUM(net_sales_mln) OVER(),2) as pct
+FROM cte1
+ORDER BY net_sales_mln DESC;
+```
+
+### 13) As a product owner, I want to see region wise(APAC, EU, LTAM ect)% net sales breakdown by customett in a respective region so that i acn perform my region analysis on financialperformance of the company
+```sql
+WITH cte2 AS (SELECT 
+				c.customer,
+                c.region,
+				ROUND(SUM(net_sales/1000000),2) as net_sales_mln
+			FROM net_sales n
+			JOIN dim_customer c
+			ON n.customer_code = c.customer_code
+			WHERE 
+				n.fiscal_year = 2021
+			GROUP BY c.customer, c.region)
+            
+SELECT 
+	*,
+    ROUND(net_sales_mln * 100/ SUM(net_sales_mln) OVER(partition by region),2) as pct_share_region
+FROM cte2
+ORDER BY region, net_sales_mln DESC;
 ```
