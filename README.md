@@ -1,1 +1,1 @@
-# MySQL-Finance-Supply-Chain-Analytics
+# Finance & Supply-Chain Analytics
