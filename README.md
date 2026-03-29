@@ -25,16 +25,16 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 > - Fiscal Quarter Calculation
 
 - [x] **Reports Created**
-- Monthly Gross Sales (Product Transactions)
-- Customer-wise Monthly Gross Sales (Country-specific)
-- Yearly Gross Sales Report (Customer-wise)
-- Market Badge Classification:
+> - Monthly Gross Sales (Product Transactions)
+> - Customer-wise Monthly Gross Sales (Country-specific)
+> - Yearly Gross Sales Report (Customer-wise)
+> - Market Badge Classification:
   - Gold (> 5M sales)
   - Silver / Bronze
-- Pre-Invoice Discount Analysis (Top markets, Top products, Top customers)
+> - Pre-Invoice Discount Analysis (Top markets, Top products, Top customers)
 
 ### Supply Chain Analysis
-- **Forecast Accuracy Report using:**
+> - **Forecast Accuracy Report using:**
   - Net Error
   - Absolute Error
   - Forecast Accuracy (%)
