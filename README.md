@@ -21,8 +21,8 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 ## Key Features & Work Done
 ### Financial Analysis
 - [x] **User Defined Functions (UDFs)**
-- Fiscal Year Calculation
-- Fiscal Quarter Calculation
+> - Fiscal Year Calculation
+> - Fiscal Quarter Calculation
 
 - [x] **Reports Created**
 - Monthly Gross Sales (Product Transactions)
