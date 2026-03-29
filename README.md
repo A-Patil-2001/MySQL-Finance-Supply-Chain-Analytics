@@ -53,3 +53,10 @@ This project focuses on Finance and Supply Chain Analytics for AtliQ Hardware, l
 > - Net Sales
 > - Pre-Invoice Discount Sales
 > - Post-Invoice Discount Sales
+
+## Key Insights
+- [x] Identified top-performing customers, products, and markets
+- [x] Highlighted high discount impact on profitability
+- [x] Segmented markets based on performance (Gold/Silver/Bronze)
+- [x] Evaluated forecasting accuracy to improve demand planning
+- [x] Enabled better financial tracking and strategic decisions
